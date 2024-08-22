@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="heading">
+    <h1>Contact Us</h1>
+   </div>
+
+    <div class="bg-img">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>123 Main St, Anytown, USA</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>+1 234 567 890</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>support&#64;blogspots.com</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" formControlName="name" placeholder="Name" class="form-control" />
+                            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
+                                Name is required
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" formControlName="email" placeholder="Email" class="form-control" />
+                            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+                                <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
+                                <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="text" formControlName="subject" placeholder="Subject" class="form-control subject-field" />
+                        <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="error">
+                            Subject is required
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <textarea formControlName="message" placeholder="Your Message" class="form-control message-field"></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+                            Message is required
+                        </div>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
