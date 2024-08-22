@@ -1,9 +1,13 @@
 .navbar-nav{    
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
     width: 40vw;
     display: flex;
     justify-content: space-around;
    
+}
+.nav-link{
+    font-size: large;
+    color:black;
 }
 
 .child{
