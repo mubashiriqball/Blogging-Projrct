@@ -11,4 +11,6 @@ import { ClientSideRoutingModule } from './client-side-routing.module';
     ClientSideRoutingModule
   ]
 })
-export class ClientSideModule { }
+export class ClientSideModule {
+  
+ }
