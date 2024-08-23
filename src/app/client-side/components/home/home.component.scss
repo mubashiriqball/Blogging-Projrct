@@ -1,0 +1,353 @@
+
+//  nav-tab css 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+  .nav{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    width:max-content;
+    position: relative;
+    transform: translate(50%);
+    bottom:40px;
+  }
+ 
+  
+  .nav-link {
+    color: black;
+    border-radius: 20px; /* Added radius to the buttons */
+    background-color: transparent; /* Default background color */
+    transition: all 0.3s ease;
+   
+  
+    &.active {
+      color: white; /* White text when active */
+      background-color: black; /* Black background when active */
+    }
+  
+    &:hover {
+      background-color: #333; /* Slightly darker background on hover */
+      color: white; /* White text on hover */
+    }
+  }
+  
+  .nav-tab{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+// home data css
+.slideimage {
+  background-size: 100% 100%;
+  width: 1120px;;
+  height: 500px;
+  background-position: 0% 0;
+  /* Start from the left */
+  background-image: url('https://plus.unsplash.com/premium_photo-1681755915233-9acafb348a7f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3N8ZW58MHx8MHx8fDA%3D');
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation: changeImage 15s linear infinite, slideImage 15s linear infinite;
+}
+
+@keyframes changeImage {
+  0% {
+      background-image: url('https://plus.unsplash.com/premium_photo-1681755915233-9acafb348a7f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3N8ZW58MHx8MHx8fDA%3D');
+  }
+
+  25% {
+      background-image: url('https://img.freepik.com/free-photo/anonymous-woman-with-coffee-cafe_23-2147785366.jpg?uid=R158205955&ga=GA1.1.969309098.1723704216&semt=ais_hybrid');
+  }
+
+  50% {
+      background-image: url('https://img.freepik.com/free-photo/flat-lay-digital-drawing-tablet_23-2148223241.jpg?uid=R158205955&ga=GA1.1.969309098.1723704216&semt=ais_hybrid');
+  }
+
+  75% {
+      background-image: url('https://img.freepik.com/free-photo/crop-hand-writing-notebook-near-camera-coffee_23-2147823697.jpg?uid=R158205955&ga=GA1.1.969309098.1723704216&semt=ais_hybrid');
+  }
+}
+
+// culture section
+.culture-category .post-entry {
+  margin-bottom: 30px;
+
+}
+
+.culture-category .post-entry h3 a {
+  color: var(--heading-color);
+  font-weight: 600;
+  color: gray;
+  text-decoration: none;
+
+}
+
+.culture-category .post-entry h3 a:hover {
+  text-decoration: underline;
+
+}
+
+.culture-category .post-entry .thumbnail {
+  flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+  .culture-category .post-entry .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.culture-category .post-entry.half .thumbnail {
+  flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+  .culture-category .post-entry.half .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.culture-category .post-entry.small-img .thumbnail {
+  flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+  .culture-category .post-entry.small-img .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.culture-category .border-bottom {
+  border-color: color-mix(in srgb, var(--default-color), transparent 90%) !important;
+}
+
+.culture-category .post-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 10px;
+}
+
+.culture-category .author .photo {
+  margin-right: 10px;
+}
+
+.culture-category .author .name h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: var(--default-font);
+  color: gray;
+}
+
+.culture-category .post-list {
+  margin-bottom: 30px;
+}
+
+.culture-category .post-list img {
+  margin-bottom: 30px;
+}
+
+.culture-category .post-list h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: gray;
+}
+
+.culture-category .post-list h2 a {
+  color: var(--heading-color);
+}
+
+.culture-category .post-list h2 a:hover {
+  text-decoration: underline;
+}
+
+.culture-category .post-list h2 a {
+  color: var(--heading-color);
+  text-decoration: none;
+  /* Remove underline from h2 links */
+}
+
+.culture-category .post-list.lg h2 {
+  font-size: 40px;
+  line-height: 1;
+  color: gray;
+}
+
+
+.section-title-container h2 {
+  text-align: center;
+  width: 100%;
+  color: gray;
+}
+
+/* Apply hover and transform effects on images */
+.post-list img,
+.post-entry img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+}
+
+.post-list img:hover,
+.post-entry img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// business-category
+.business-category .post-entry {
+  margin-bottom: 30px;
+}
+
+.business-category .post-entry h3 a {
+  color: var(--heading-color);
+  font-weight: 600;
+
+}
+
+.business-category .post-entry h3 a:hover {
+  text-decoration: underline;
+}
+
+.business-category .post-entry .thumbnail {
+  flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+  .business-category .post-entry .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.business-category .post-entry.half .thumbnail {
+  flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+  .business-category .post-entry.half .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.business-category .post-entry.small-img .thumbnail {
+  flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+  .business-category .post-entry.small-img .thumbnail {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+  }
+}
+
+.business-category .border-bottom {
+  border-color: color-mix(in srgb, var(--default-color), transparent 90%) !important;
+}
+
+.business-category .post-meta {
+  font-size: 11px;
+  letter-spacing: 0.07rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 10px;
+}
+
+.business-category .author .photo {
+  margin-right: 10px;
+}
+
+.business-category .author .photo img {
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+.business-category .author .name h3 {
+
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: var(--default-font);
+
+}
+
+.business-category .post-list {
+  margin-bottom: 30px;
+}
+
+.business-category .post-list img {
+  margin-bottom: 30px;
+}
+
+.business-category .post-list h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+
+}
+
+.business-category .post-list h2 a {
+
+  color: var(--heading-color);
+}
+
+.business-category .post-list h2 a:hover {
+  text-decoration: underline;
+}
+
+.business-category .post-list.lg h2 {
+  font-size: 40px;
+  line-height: 1;
+
+}
+
+#business-category h2 a,
+#business-category h3 a {
+  text-decoration: none !important;
+}
+
+#business-category h2 a,
+#business-category h3 a {
+  text-decoration: none;
+  color: gray;
+}
+
+.main:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#business-category .img-fluid {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+#business-category .img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+      margin-top: 110px;
+  }
+}

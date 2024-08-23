@@ -22,7 +22,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  //forRoot(routes, { anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }) 
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  // for nav tab
+ 
 })
 export class ClientSideRoutingModule { }

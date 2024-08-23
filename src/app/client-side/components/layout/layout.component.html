@@ -5,22 +5,23 @@
             <div class="logo" style="font-size: 25px;font-weight: 700; letter-spacing: 1px; text-shadow:0 1px 1px;">
                 BlogSpot
             </div>
-            <div class="navlinks">
+               <div class="navlinks">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item ">
-                        <a class="nav-link" [routerLink]="['/home']">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" [routerLink]="['/myblogs']">MyBlogs</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" [routerLink]="['/contact-to-admin']">Contact-to-Admin</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']" [class.active]="currentUrl === '/home'">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/myblogs']" [class.active]="currentUrl === '/myblogs'">MyBlogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/contact-to-admin']" [class.active]="currentUrl === '/contact-to-admin'">Contact-to-Admin</a>
+                  </li>
                 </ul>
-            </div>
+              </div>
+              
         </div>
         <ul class="navbar-item flex-row ml-auto">
-            <li class="nav-item dropdown user-profile-dropdown">
+            <!-- <li class="nav-item dropdown user-profile-dropdown">
                 <a href="#" class="nav-link user" id="Notify" data-bs-toggle="dropdown">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bell-fill"
                         viewBox="0 0 16 16">
@@ -28,14 +29,8 @@
                             d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
                     </svg>
                 </a>
-                <div class="dropdown-menu">
-                    <div class="dp-main-menu">
-                        <a href="" class="dropdown-item message-item">
-                            <!-- Notification details can go here -->
-                        </a>
-                    </div>
-                </div>
-            </li>
+               
+            </li> -->
             <li>
                 <div class="dropdown">
                     <!-- <i class="bi bi-person-circle dropbtn"></i> -->

@@ -1,1 +1,256 @@
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, magnam in. Asperiores, dolore deserunt ipsa quod excepturi exercitationem consequatur dolor ipsum qui beatae odio assumenda tenetur eum dolorum sequi magnam.</p>
+<!-- nav-tab -->
+<div class="nav-tab">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true" 
+                [routerLink]="[]" fragment="culture-category">Culture</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                [routerLink]="[]" fragment="business-category"
+                  >Business</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Technology</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Marketing</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Letrature</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Games</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Stories</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+</div>
+
+<!-- home data -->
+<div class="container pt-4 mt-5 w-100 p-lg-4">
+    <!-- Trending Category Section -->
+    <div class="container">
+        <div class="slideimage">
+            <!-- <img src="your-image.jpg" alt="Image description" style="width: 100%; height: auto;"> -->
+            <!-- <div class="caption">
+                <a href="">Your caption goes here</a>
+            </div> -->
+        </div>
+    </div>
+    <section id="culture-category" class="culture-category section m-lg-5 ">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <div class="section-title-container d-flex align-items-center justify-content-between">
+                <h2>Culture</h2>
+
+            </div>
+            <hr>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="d-lg-flex post-entry">
+                        <a class="back" href="blog-details.html" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                            <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                        </a>
+                        <div>
+                            <div class="post-meta">
+                                <span class="date">{{ blog.tags[0] }}</span>
+
+                                <span class="mx-1">•</span>
+                                <span>{{ blog.publishDate | date }}</span>
+                            </div>
+                            <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                            <p>{{ blog.content }}</p>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4" *ngFor="let tag of blog.tags; let i = index">
+                            <div class="post-list border-bottom">
+                                <a href="blog-details.html"><img [src]="blog.imageUrl" alt="{{ blog.title }}"
+                                        class="img-fluid"></a>
+                                <div class="post-meta">
+                                    <span class="date">{{ tag }}</span>
+                                    <span class="mx-1">•</span>
+                                    <span>{{ blog.publishDate | date }}</span>
+                                </div>
+                                <h2 class="mb-2"><a href="blog-details.html">{{ blog.title }}</a></h2>
+                                <span class="author mb-3 d-block">{{ blog.author }}</span>
+                                <!-- <p class="mb-4 d-block">{{ blog.content }}</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3" *ngFor="let tag of blog.tags; let i = index">
+                    <div class="post-list border-bottom">
+                        <div class="post-meta">
+                            <span class="date">{{ tag }}</span>
+                            <span class="mx-1">•</span>
+                            <span>{{ blog.publishDate | date }}</span>
+                            <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                        </div>
+                        <h2 class="mb-2"><a href="blog-details.html">{{ blog.title }}</a></h2>
+                        <span class="author mb-3 d-block">{{ blog.author }}</span>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="business-category" class="business-category section m-lg-5">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <div class="section-title-container d-flex align-items-center justify-content-between">
+                <h2>Business</h2>
+
+
+            </div>
+            <hr>
+        </div><!-- End Section Title -->
+
+        <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row">
+                <div class="col-md-9 order-md-2">
+                    <a class="back" href="blog-details.html" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                        <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                    </a>
+                    <div>
+                        <div class="post-meta">
+                            <span class="date">{{ blog.tags[0] }}</span>
+
+                            <span class="mx-1">•</span>
+                            <span>{{ blog.publishDate | date }}</span>
+                        </div>
+                        <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="post-list border-bottom">
+                                <a class="back" href="blog-details.html"
+                                    class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                                    <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                                </a>
+                                <div>
+                                    <div class="post-meta">
+                                        <span class="date">{{ blog.tags[0] }}</span>
+
+                                        <span class="mx-1">•</span>
+                                        <span>{{ blog.publishDate | date }}</span>
+                                    </div>
+                                    <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                                </div>
+                            </div>
+
+                            <div class="post-list">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="post-list">
+                                <a class="back" href="blog-details.html"
+                                    class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                                    <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                                </a>
+                                <div>
+                                    <div class="post-meta">
+                                        <span class="date">{{ blog.tags[0] }}</span>
+
+                                        <span class="mx-1">•</span>
+                                        <span>{{ blog.publishDate | date }}</span>
+                                    </div>
+                                    <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="post-list border-bottom">
+                        <a class="back" href="blog-details.html" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                            <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                        </a>
+                        <div>
+                            <div class="post-meta">
+                                <span class="date">{{ blog.tags[0] }}</span>
+
+                                <span class="mx-1">•</span>
+                                <span>{{ blog.publishDate | date }}</span>
+                            </div>
+                            <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="post-list border-bottom">
+                        <a class="back" href="blog-details.html" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                            <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                        </a>
+                        <div>
+                            <div class="post-meta">
+                                <span class="date">{{ blog.tags[0] }}</span>
+
+                                <span class="mx-1">•</span>
+                                <span>{{ blog.publishDate | date }}</span>
+                            </div>
+                            <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="post-list border-bottom">
+                        <a class="back" href="blog-details.html" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+                            <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="img-fluid">
+                        </a>
+                        <div>
+                            <div class="post-meta">
+                                <span class="date">{{ blog.tags[0] }}</span>
+
+                                <span class="mx-1">•</span>
+                                <span>{{ blog.publishDate | date }}</span>
+                            </div>
+                            <h3><a href="blog-details.html">{{ blog.title }}</a></h3>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+<!-- <app-footer></app-footer> -->
