@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">BlogSpot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/homepage">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/homeabout">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/home-blogs">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/homeservices">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/homecontact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="auth-buttons">
+        <!-- Login Dropdown -->
+        <div class="dropdown d-inline-block">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" id="loginDropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-user"></i> Login
+          </button>
+          <div class="dropdown-menu" aria-labelledby="loginDropdown">
+            <a class="dropdown-item" routerLink="/admin-login-signup">
+              <i class="fa-solid fa-user-shield"></i> Admin Login
+            </a>
+            <a class="dropdown-item" routerLink="/client-side-login-signup">
+              <i class="fa-solid fa-user"></i> Client Login
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,551 @@
+/* General Styles for Carousel */
+#carouselExampleCaptions {
+  height: 100vh;
+  /* Ensure the carousel container fills the height of its parent */
+}
+
+.carousel-item {
+  height: 100vh;
+  /* Full viewport height for each carousel item */
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+  /* Smooth transition */
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Slightly darker overlay for better text visibility */
+  z-index: 1;
+  transition: background 0.5s ease-in-out;
+  /* Smooth transition for overlay */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 10%;
+  // left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  /* Ensure text is above overlay */
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  /* Fade-in animation */
+}
+
+.carousel-caption.show {
+  opacity: 1;
+  /* Show caption on active item */
+}
+
+.carousel-text {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /* Ensure text is centered within the container */
+}
+
+.carousel-caption h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.carousel-caption a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+  /* Invert color for better visibility on dark images */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 1.75rem;
+    /* Smaller heading on smaller screens */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+    /* Smaller text on smaller screens */
+  }
+
+  .carousel-caption a {
+    font-size: 0.875rem;
+    /* Smaller button text on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+    /* Even smaller heading on extra small screens */
+  }
+
+  .carousel-caption p {
+    font-size: 0.875rem;
+    /* Smaller text on extra small screens */
+  }
+
+  .carousel-caption a {
+    padding: 8px 16px;
+    /* Smaller button padding on extra small screens */
+    font-size: 0.75rem;
+    /* Smaller button text on extra small screens */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ensure navbar does not overlap carousel */
+app-home-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* Ensure navbar is above other content but not overlapping carousel */
+}
+
+/* Blog Section */
+/* Featured Blog Posts Section */
+.featured-blogs {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.featured-blogs .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.featured-blogs .section-title:hover {
+  color: #007bff;
+  /* Change color on hover */
+}
+
+.featured-blogs .section-description {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.blog-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-item:hover {
+  transform: scale(1.05);
+  /* Slightly scale up the item on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+  background-color: #f9f9f9;
+  /* Slight background color change on hover */
+}
+
+.blog-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 0.3s ease;
+}
+
+.blog-item:hover .blog-image {
+  transform: scale(1.1);
+  /* Zoom effect on image hover */
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-title {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.blog-title:hover {
+  color: #007bff;
+  /* Change color on hover */
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* General Button Styles */
+.btn-primary {
+  display: inline-block;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 12px 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 50px;
+  /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Soft shadow */
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  /* Gradient background */
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #003d7a);
+  /* Darker gradient on hover */
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+}
+
+.btn-primary:active {
+  background: linear-gradient(45deg, #003d7a, #002b5c);
+  /* Even darker gradient on click */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Reduce shadow on click */
+  transform: scale(0.98);
+  /* Slightly shrink on click */
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+  /* Focus ring */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featured-blogs .section-title {
+    font-size: 2rem;
+  }
+
+  .featured-blogs .section-description {
+    font-size: 1rem;
+  }
+
+  .blog-item {
+    margin-bottom: 20px;
+  }
+
+  .blog-title {
+    font-size: 1.5rem;
+  }
+
+  .blog-description {
+    font-size: 0.875rem;
+  }
+
+  .blog-item a.btn-primary {
+    font-size: 0.875rem;
+  }
+}
+
+/* Call to Action Section */
+.call-to-action {
+  position: relative;
+  padding: 100px 0;
+  background-image: url('/assets/homeslider/slider3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.call-to-action .cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay color with opacity */
+  z-index: 1;
+  /* Ensure it sits above the background image */
+}
+
+.call-to-action .container {
+  position: relative;
+  z-index: 2;
+  /* Bring content above the overlay */
+}
+
+.cta-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.cta-description {
+  font-size: 24px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.cta-btn {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInUp 2.5s ease-out forwards;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+  background-color: #f0f8ff;
+  /* Light blue background */
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  /* Subtle background gradient effect */
+}
+
+.testimonials .section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  /* Ensure the text does not overflow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Soft shadow for the title */
+}
+
+.testimonials .section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  /* Gradient underline */
+  transform: scaleX(0);
+  /* Start from 0 width */
+  transition: transform 0.3s ease;
+}
+
+.testimonials .section-title:hover::after {
+  transform: scaleX(1);
+  /* Expand underline on hover */
+}
+
+.testimonials .section-description {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #666;
+  animation: fadeIn 2s ease-out;
+  /* Fade-in effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for the description */
+}
+
+.testimonial-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  height: 350px;
+  /* Increased height for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  /* Smooth transitions for various effects */
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-15px);
+  /* Lift the item up on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow on hover */
+  background-color: #f9f9f9;
+  /* Slight background color change on hover */
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  position: relative;
+  line-height: 1.6;
+}
+
+.testimonial-content p::before {
+  content: "“";
+  position: absolute;
+  font-size: 4rem;
+  color: #ff7e5f;
+  left: -30px;
+  top: -20px;
+  /* Large quote mark before text */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-content p:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+  /* Show and move quote mark on hover */
+}
+
+.testimonial-content h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.testimonial-content h5:hover {
+  color: #ff7e5f;
+  /* Change color on hover */
+}
+
+.testimonial-content span {
+  display: block;
+  font-size: 1.1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .testimonials .section-title {
+    font-size: 2.5rem;
+  }
+
+  .testimonials .section-description {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-item {
+    padding: 20px;
+    height: 300px;
+  }
+
+  .testimonial-content p {
+    font-size: 1rem;
+  }
+
+  .testimonial-content h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

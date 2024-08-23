@@ -1,0 +1,200 @@
+/* Footer */
+.footer {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    position: relative;
+    background-color: rgb(69, 67, 67);
+    width: 100%;
+    /* Ensures the footer spans the entire width */
+    padding: 0 15px;
+    /* Adds padding to prevent content from touching the edges */
+}
+
+#footer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adjusted box-shadow for a softer effect */
+    z-index: 10;
+    position: relative;
+    padding: 20px 15px;
+    /* Reduced padding to decrease height */
+    margin: 0;
+    /* Removed margin to ensure it fits the page width */
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-top {
+    padding-top: 30px;
+    /* Reduced padding-top */
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .footer-about .logo {
+    line-height: 1;
+    margin-bottom: 15px;
+    /* Reduced margin-bottom */
+}
+
+.footer .footer-about .logo img {
+    max-height: 30px;
+    /* Reduced max-height */
+    margin-right: 6px;
+}
+
+.footer .footer-about .logo span {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-size: 22px;
+    /* Reduced font-size */
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.footer .footer-about p {
+    font-size: 12px;
+    /* Reduced font-size */
+    font-family: var(--heading-font);
+    color: white;
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    /* Reduced width */
+    height: 30px;
+    /* Reduced height */
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 14px;
+    /* Reduced font-size */
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    margin-right: 8px;
+    /* Reduced margin-right */
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.footer h4 {
+    font-size: 18px;
+    /* Reduced font-size */
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+    /* Reduced padding-bottom */
+    color: rgb(215, 214, 214);
+}
+
+.footer .footer-links {
+    margin-bottom: 20px;
+    /* Reduced margin-bottom */
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul i {
+    padding-right: 2px;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.footer .footer-links ul li {
+    padding: 8px 0;
+    /* Reduced padding */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+.footer .footer-links ul a {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    display: inline-block;
+    line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+    color: var(--accent-color);
+}
+
+.footer .footer-contact p {
+    margin-bottom: 5px;
+}
+
+.footer .copyright {
+    padding: 15px 0;
+    /* Reduced padding */
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+    color: white;
+}
+
+.footer .credits {
+    margin-top: 8px;
+    font-size: 12px;
+    /* Reduced font-size */
+    color: white;
+}
+
+.footer .credits a {
+    color: var(--default-color);
+}
+
+svg {
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    border: 1px solid;
+    padding: 4px;
+    /* Reduced padding */
+    border-radius: 50px;
+}
+
+svg:hover {
+    color: rgb(185, 184, 184);
+    transform: scale(1.2);
+    background-color: rgb(254, 254, 254);
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.col-lg-4 {
+    color: white;
+    text-decoration: none;
+    text-underline-offset: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.heading {
+    font-size: 22px;
+    /* Reduced font-size */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 px;
+}
+
+.sitename {
+    text-shadow: 0 1px 1px;
+}
