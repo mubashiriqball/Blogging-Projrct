@@ -1,0 +1,223 @@
+.container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 100px;
+}
+
+.pagetitle h2.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile {
+    padding: 30px 0;
+}
+
+.profile .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image-container button {
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-image-container button i {
+    color: white;
+}
+
+.profile-image-container button:hover {
+    background-color: #0056b3;
+}
+
+.profile h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.profile h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.ocial-links a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.ocial-links a:hover {
+    color: #007bff;
+}
+
+.nav-tabs-bordered .nav-link {
+    border: none;
+    margin-right: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-tabs-bordered .nav-link.active {
+    background-color: gray;
+    color: white;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.profile-overview .label {
+    font-weight: bold;
+    color: #777;
+}
+
+.profile-overview .form-control {
+    border-radius: 5px;
+}
+
+.editsavecancelbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.editbutton,
+.savebutton,
+.cancelbutton {
+    margin-left: 10px;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.editbutton {
+    background-color: #007bff;
+    color: white;
+}
+
+.editbutton:hover {
+    background-color: #0056b3;
+}
+
+.savebutton {
+    background-color: #28a745;
+    color: white;
+}
+
+.savebutton:hover {
+    background-color: #218838;
+}
+
+.cancelbutton {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancelbutton:hover {
+    background-color: #5a6268;
+}
+
+// new css
+.container {
+    margin-top: 60px;
+    padding: 20px 30px;
+    transition: all 0.3s;
+    padding-left: 130px;
+}
+
+.nav {
+    background-color: rgb(246, 34, 34);
+    border-radius: 5px;
+}
+
+.heading {
+    color: rgb(106, 105, 105);
+    text-shadow: 0px 1px 2px;
+}
+
+@media (max-width: 1199px) {
+    #main {
+        padding: 20px;
+    }
+}
+
+
+/* card css */
+.profile-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* border: 1px solid rgb(170, 169, 169); */
+    border-radius: 5px;
+}
+
+.card-title {
+    padding: 20px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #012970;
+    font-family: "Poppins", sans-serif;
+}
+
+.profile .profile-overview .row {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.detail-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editbutton,
+.savebutton,
+.cancelbutton {
+    border-radius: 25px;
+}

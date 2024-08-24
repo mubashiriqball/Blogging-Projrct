@@ -1,0 +1,57 @@
+.dashboard-cards {
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #68a51e 0%, rgb(23, 26, 39));
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px;
+    animation: bounce 1s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: none;
+}
+
+.card-body {
+    padding: 77px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}

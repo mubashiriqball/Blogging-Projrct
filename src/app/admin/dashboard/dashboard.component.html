@@ -1,0 +1,40 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="dashboard-cards ">
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Blogs</h5>
+                    <p class="card-text">{{ totalBlogs }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Clients</h5>
+                    <p class="card-text">{{ totalClients }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Published Blogs</h5>
+                    <p class="card-text">{{ publishedBlogs }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Blogs</h5>
+                    <p class="card-text">{{ pendingBlogs }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
